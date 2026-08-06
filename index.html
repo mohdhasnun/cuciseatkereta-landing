@@ -109,6 +109,11 @@ nav{
   margin-bottom:1.5rem;box-shadow:var(--shadow);
   animation:fadeUp 0.6s ease both;
 }
+.hero-guarantee{
+  font-size:0.82rem;color:var(--muted);font-weight:600;
+  margin-top:1rem;
+  animation:fadeUp 0.6s 0.35s ease both;
+}
 .hero h1{
   font-family:var(--font-display);letter-spacing:-0.01em;
   font-size:clamp(2.4rem,8vw,5rem);
@@ -276,6 +281,22 @@ section{padding:5rem 1.5rem}
   padding:2rem 1rem 1rem;color:#fff;font-weight:600;font-size:0.85rem;
 }
 
+/* STORY */
+.story{background:var(--bg)}
+.story-grid{
+  display:grid;grid-template-columns:1.4fr 1fr;gap:2.5rem;align-items:center;
+}
+.story-text p{color:var(--text);font-size:0.95rem;line-height:1.8;margin-top:1rem}
+.story-card{
+  background:#fff;border:1.5px solid var(--border);border-radius:var(--radius);
+  box-shadow:var(--shadow);padding:1.8rem;display:flex;flex-direction:column;gap:1.5rem;
+}
+.story-num{font-family:var(--font-display);font-size:2.2rem;font-weight:800;color:var(--blue)}
+.story-label{font-size:0.78rem;color:var(--muted);font-weight:600;margin-top:0.2rem;line-height:1.4}
+@media(max-width:720px){
+  .story-grid{grid-template-columns:1fr}
+}
+
 /* WHY */
 .why{background:#fff}
 .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-top:2.5rem}
@@ -422,11 +443,12 @@ footer a{color:rgba(255,255,255,0.7);text-decoration:none}
   <div class="hero-overlay"></div>
   <div class="hero-badge">⭐ 71 Reviews 5.0 ★ · Seri Kembangan</div>
   <h1>Pusat Cuci Dalaman Kereta<br>Yang <em>Dipercayai</em> di<br>Seri Kembangan</h1>
-  <p class="hero-sub">Pakar <strong>cuci seat, kusyen, karpet & bumbung kereta</strong> — guna teknik deep cleaning extraction yang betul. Bersih sampai ke akar, hilangkan bau, kering sempurna. Servis cepat, harga berpatutan, hasil terjamin.</p>
+  <p class="hero-sub">Kereta berbau, kusyen bertompok, karpet lembap walau dah cuci berkali-kali? Punca sebenar tersorok dalam fiber seat bukan di permukaan. Kami sedut keluar guna <strong>deep cleaning extraction</strong>, keringkan sempurna tanpa lembap hasilnya bersih & wangi tahan berbulan-bulan.</p>
   <div class="hero-cta">
     <a class="btn-primary" href="https://wa.me/60176993876?text=Salam%2C%20saya%20nak%20booking%20cuci%20dalaman%20kereta" target="_blank">💬 WhatsApp Sekarang</a>
     <a class="btn-outline" href="tel:+60176993876">📞 017-699 3876</a>
   </div>
+  <p class="hero-guarantee">🛡️ Tak puas hati dalam 24 jam? Kami cucikan semula percuma.</p>
   <div class="stats-bar">
     <div class="stat-item"><div class="stat-num">500+</div><div class="stat-label">Kereta Telah Bersih & Wangi</div></div>
     <div class="stat-item"><div class="stat-num">5.0★</div><div class="stat-label">71 Google Reviews</div></div>
@@ -608,6 +630,24 @@ footer a{color:rgba(255,255,255,0.7);text-decoration:none}
   </div>
 </section>
 
+<!-- STORY -->
+<section class="story">
+  <div class="container">
+    <div class="story-grid">
+      <div class="story-text">
+        <div class="section-eyebrow">Kisah Kami</div>
+        <h2 class="section-title">Bukan Sekadar Kedai Cuci Kereta</h2>
+        <p>Kami mula sebab satu masalah mudah — susah nak jumpa servis cuci interior kereta di Seri Kembangan yang betul-betul teliti, bukan sekadar "vacuum & lap". Ramai pelanggan datang dengan kereta yang dah "cuba cuci tempat lain" tapi bau dan kotoran tetap ada, sebab kotoran sebenar tersembunyi jauh dalam fiber seat & karpet — bukan di permukaan.</p>
+        <p>Sejak itu kami fokus 100% pada satu benda sahaja: deep cleaning interior kereta yang buat pelanggan tak perlu balik dan cuba tempat lain lagi. Setiap kereta yang masuk, kami layan macam kereta sendiri.</p>
+      </div>
+      <div class="story-card">
+        <div class="story-stat"><div class="story-num">500+</div><div class="story-label">Kereta Dilayan</div></div>
+        <div class="story-stat"><div class="story-num">100%</div><div class="story-label">Owner-Operated<br>Bukan Franchise</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- WHY -->
 <section class="why">
   <div class="container">
@@ -618,6 +658,7 @@ footer a{color:rgba(255,255,255,0.7);text-decoration:none}
       <div class="why-card"><div class="why-icon">💨</div><h3>Kering Sempurna</h3><p>Guna blower profesional berteknologi tinggi. Setiap inci seat & karpet dikeringkan sehingga 100% sempurna — tiada kelembapan, hasilnya bersih, segar dan wangi tahan lama.</p></div>
       <div class="why-card"><div class="why-icon">🌿</div><h3>Chemical Selamat</h3><p>Selamat untuk kanak-kanak dan haiwan peliharaan, tapi berkesan untuk stain & bau yang degil.</p></div>
       <div class="why-card"><div class="why-icon">⏱️</div><h3>Siap 1–3 Jam</h3><p>Booking mudah via WhatsApp. Slot fleksibel, servis cepat & berkualiti tinggi.</p></div>
+      <div class="why-card"><div class="why-icon">🛡️</div><h3>Garansi Bertulis</h3><p>Tak berpuas hati dalam 24 jam selepas cucian? Kami cucikan semula sepenuhnya — tanpa caj tambahan.</p></div>
     </div>
   </div>
 </section>
@@ -1411,6 +1452,10 @@ footer a{color:rgba(255,255,255,0.7);text-decoration:none}
     <div class="faq-card">
       <h3>Adakah chemical yang digunakan selamat untuk kanak-kanak dan haiwan peliharaan?</h3>
       <p>Ya, kami menggunakan chemical yang selamat untuk kanak-kanak dan haiwan peliharaan, namun tetap berkesan untuk menghilangkan stain dan bau yang degil. Keselamatan keluarga anda adalah keutamaan kami.</p>
+    </div>
+    <div class="faq-card">
+      <h3>Macam mana kalau saya tak berpuas hati dengan hasil cucian?</h3>
+      <p>Kami bagi garansi bertulis — kalau dalam 24 jam selepas cucian anda rasa ada bahagian yang tak memuaskan (contoh: bau masih ada atau stain masih kelihatan), hubungi kami dan kami akan cucikan semula tanpa sebarang caj tambahan.</p>
     </div>
   </div>
 </section>
