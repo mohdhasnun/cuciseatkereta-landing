@@ -1,0 +1,243 @@
+{
+  "report": [
+    {
+      "width": 320,
+      "overflow": false,
+      "brokenLocalImages": [],
+      "brokenAnchors": [],
+      "h1": 1,
+      "phone": true,
+      "heroHeight": 1064,
+      "sections": [
+        "hero",
+        "servis",
+        "tentang",
+        "why",
+        "problems",
+        "hasil",
+        "mid-cta",
+        "harga",
+        "ulasan",
+        "lokasi",
+        "faq",
+        "cta-bottom"
+      ]
+    },
+    {
+      "width": 375,
+      "overflow": false,
+      "brokenLocalImages": [],
+      "brokenAnchors": [],
+      "h1": 1,
+      "phone": true,
+      "heroHeight": 1064,
+      "sections": [
+        "hero",
+        "servis",
+        "tentang",
+        "why",
+        "problems",
+        "hasil",
+        "mid-cta",
+        "harga",
+        "ulasan",
+        "lokasi",
+        "faq",
+        "cta-bottom"
+      ]
+    },
+    {
+      "width": 430,
+      "overflow": false,
+      "brokenLocalImages": [],
+      "brokenAnchors": [],
+      "h1": 1,
+      "phone": true,
+      "heroHeight": 1037,
+      "sections": [
+        "hero",
+        "servis",
+        "tentang",
+        "why",
+        "problems",
+        "hasil",
+        "mid-cta",
+        "harga",
+        "ulasan",
+        "lokasi",
+        "faq",
+        "cta-bottom"
+      ]
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "brokenLocalImages": [],
+      "brokenAnchors": [],
+      "h1": 1,
+      "phone": true,
+      "heroHeight": 777,
+      "sections": [
+        "hero",
+        "servis",
+        "tentang",
+        "why",
+        "problems",
+        "hasil",
+        "mid-cta",
+        "harga",
+        "ulasan",
+        "lokasi",
+        "faq",
+        "cta-bottom"
+      ]
+    },
+    {
+      "width": 832,
+      "overflow": false,
+      "brokenLocalImages": [],
+      "brokenAnchors": [],
+      "h1": 1,
+      "phone": true,
+      "heroHeight": 686,
+      "sections": [
+        "hero",
+        "servis",
+        "tentang",
+        "why",
+        "problems",
+        "hasil",
+        "mid-cta",
+        "harga",
+        "ulasan",
+        "lokasi",
+        "faq",
+        "cta-bottom"
+      ]
+    },
+    {
+      "width": 1024,
+      "overflow": false,
+      "brokenLocalImages": [],
+      "brokenAnchors": [],
+      "h1": 1,
+      "phone": true,
+      "heroHeight": 690,
+      "sections": [
+        "hero",
+        "servis",
+        "tentang",
+        "why",
+        "problems",
+        "hasil",
+        "mid-cta",
+        "harga",
+        "ulasan",
+        "lokasi",
+        "faq",
+        "cta-bottom"
+      ]
+    },
+    {
+      "width": 1440,
+      "overflow": false,
+      "brokenLocalImages": [],
+      "brokenAnchors": [],
+      "h1": 1,
+      "phone": true,
+      "heroHeight": 738,
+      "sections": [
+        "hero",
+        "servis",
+        "tentang",
+        "why",
+        "problems",
+        "hasil",
+        "mid-cta",
+        "harga",
+        "ulasan",
+        "lokasi",
+        "faq",
+        "cta-bottom"
+      ]
+    }
+  ],
+  "expanded": [
+    {
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "width": 375,
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "overflow": false
+    }
+  ],
+  "seo": {
+    "title": "Cuci Seat & Kusyen Kereta Seri Kembangan | CUCISEAT",
+    "description": "Cuci seat, kusyen dan interior kereta di Seri Kembangan. Semua seat dari RM160. Kedai sahaja untuk pelanggan Putrajaya, Cyberjaya & Puchong. Semak harga di WhatsApp.",
+    "canonical": "https://cuciseatkereta.com/",
+    "brand": "Cuci Seat Kereta",
+    "faqMatches": true,
+    "serviceSchemaCount": 8,
+    "missingSchemaAnchors": [],
+    "missingImageAlt": 0,
+    "terms": [
+      {
+        "term": "cuci seat",
+        "present": true
+      },
+      {
+        "term": "cuci seat kereta",
+        "present": true
+      },
+      {
+        "term": "cuci kusyen kereta",
+        "present": true
+      },
+      {
+        "term": "cuci kusyen",
+        "present": true
+      },
+      {
+        "term": "cuci seat kereta near me",
+        "present": true
+      },
+      {
+        "term": "cuci kusyen kereta near me",
+        "present": true
+      },
+      {
+        "term": "car seat cleaning",
+        "present": true
+      },
+      {
+        "term": "basuh seat kereta",
+        "present": true
+      },
+      {
+        "term": "car cushion cleaning",
+        "present": true
+      }
+    ]
+  },
+  "errors": [],
+  "links": 6,
+  "conversion": {
+    "events": 6,
+    "destinations": [
+      "AW-723532476/Mm2cCPKwpIkdELz1gNkC"
+    ],
+    "messages": [
+      "Hi, saya nak semak harga cucian kereta.\n\nKereta:\nSeat: Fabric / Leather\nMasalah:\n\nSaya akan hantar gambar keadaan seat/interior."
+    ]
+  },
+  "network": "External requests blocked; live Google Ads and Maps require deployment verification."
+}
