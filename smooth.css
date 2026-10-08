@@ -147,3 +147,7 @@ main>#tentang,main>#harga{padding-bottom:40px!important}
 main>.mid-cta{padding-bottom:36px}
 .hero-proof{padding-bottom:24px}
 @media(max-width:720px){main>#servis,main>.why,main>#harga,main>#ulasan,main>.faq{padding-top:28px!important}main>#tentang,main>#harga{padding-bottom:28px!important}main>.mid-cta{padding-bottom:28px}.hero-proof{padding-bottom:20px}}
+
+/* Services introduction follows the heading at every viewport. */
+#servis .section-heading-row{display:block}
+#servis .section-heading-row>p{max-width:660px;margin:18px 0 0;padding:0}
