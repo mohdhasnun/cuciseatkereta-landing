@@ -148,6 +148,33 @@ main>.mid-cta{padding-bottom:36px}
 .hero-proof{padding-bottom:24px}
 @media(max-width:720px){main>#servis,main>.why,main>#harga,main>#ulasan,main>.faq{padding-top:28px!important}main>#tentang,main>#harga{padding-bottom:28px!important}main>.mid-cta{padding-bottom:28px}.hero-proof{padding-bottom:20px}}
 
+/* Keep the hero actions compact and side by side on phones. */
+@media(max-width:720px){
+  .hero .hero-cta{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:8px;width:100%}
+  .hero .hero-cta a,.hero .hero-cta .btn-primary,.hero .hero-cta .btn-outline{width:100%;min-width:0;min-height:46px;padding:10px 8px;font-size:12px!important;line-height:1.4;display:flex;align-items:center;justify-content:center;text-align:center}
+}
+
 /* Services introduction follows the heading at every viewport. */
 #servis .section-heading-row{display:block}
 #servis .section-heading-row>p{max-width:660px;margin:18px 0 0;padding:0}
+
+/* Blue accents follow the heading text when it wraps. */
+.hero .hero-badge{display:flex;align-items:center;gap:10px}
+.hero .hero-badge::before{content:"";width:24px;height:2px;background:#123e78;flex-shrink:0}
+.hero h1 em{text-decoration-line:underline;text-decoration-color:#2c75c9;text-decoration-thickness:5px;text-underline-offset:8px;text-decoration-skip-ink:none}
+.hero .hero-cta .btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:7px}
+.hero .hero-cta .whatsapp-icon{width:18px;height:18px;flex:0 0 18px}
+.hero .hero-cta .btn-primary span{min-width:0}
+.hero-proof>span::before{content:none}
+.hero-proof>span{display:flex;align-items:center;gap:10px;min-width:0}
+.hero-proof .trust-emoji{display:inline-flex;align-items:center;justify-content:center;flex:0 0 26px;width:26px;height:28px;font-size:21px;font-style:normal;line-height:1}
+.hero-proof>span:first-child .trust-emoji{transform:translateY(-2px)}
+.problems .problem-grid h3{display:flex;align-items:flex-start;gap:8px}
+.problem-emoji{display:inline-flex;align-items:center;justify-content:center;flex:0 0 22px;width:22px;height:24px;font-size:19px;line-height:1}
+#hasil .case>h3{display:flex;align-items:flex-start;gap:9px}
+#hasil .case>h3::before{content:"";flex:0 0 18px;width:18px;height:2px;margin-top:.6em;background:#123e78}
+.why-card .reason-emoji{display:flex;align-items:center;width:36px;height:36px;font-size:28px;line-height:1;margin-bottom:12px}
+@media(max-width:720px){
+  .hero h1 em{text-decoration-thickness:4px;text-underline-offset:6px}
+  .hero .hero-cta .btn-primary{gap:6px}
+}
