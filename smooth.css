@@ -169,6 +169,16 @@ main>.mid-cta{padding-bottom:36px}
 .hero-proof>span{display:flex;align-items:center;gap:10px;min-width:0}
 .hero-proof .trust-emoji{display:inline-flex;align-items:center;justify-content:center;flex:0 0 26px;width:26px;height:28px;font-size:21px;font-style:normal;line-height:1}
 .hero-proof>span:first-child .trust-emoji{transform:translateY(-2px)}
+.site-header .nav-brand{display:flex;flex-direction:row;align-items:center;text-align:left;gap:10px;max-width:none;min-width:0}
+.site-header .brand-logo{display:block;width:48px;height:48px;object-fit:contain;flex:0 0 48px}
+.site-header .brand-text{min-width:0}
+@media(min-width:721px){.site-header nav{grid-template-columns:minmax(230px,1fr) auto auto}}
+@media(max-width:720px){
+  .site-header .nav-brand{gap:6px;max-width:none}
+  .site-header .brand-logo{width:36px;height:36px;flex-basis:36px}
+  .site-header .nav-brand .brand-short{font-size:15px;line-height:1.25}
+  .site-header .nav-brand .brand-text>span{font-size:9px;line-height:1.4}
+}
 .problems .problem-grid h3{display:flex;align-items:flex-start;gap:8px}
 .problem-emoji{display:inline-flex;align-items:center;justify-content:center;flex:0 0 22px;width:22px;height:24px;font-size:19px;line-height:1}
 #hasil .case>h3{display:flex;align-items:flex-start;gap:9px}
