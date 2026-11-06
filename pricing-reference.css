@@ -1,0 +1,32 @@
+/* Four image cards, matching the approved pricing reference. */
+main>#harga{background:linear-gradient(115deg,#f2f7ff,#eaf2ff);padding:40px 24px 44px!important}
+#harga .section-eyebrow{color:#1559dc;font-size:12px;font-weight:800;letter-spacing:.6px!important;margin-bottom:8px}
+#harga .section-eyebrow::before{background:#1559dc;width:28px;height:3px}
+#harga .section-title{max-width:none;font-size:clamp(25px,2.7vw,34px);font-weight:800;color:#0f2044;margin:0 0 24px;line-height:1.2}
+#harga .price-card-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;align-items:stretch}
+#harga .price-service{display:flex;flex-direction:column;min-width:0;background:#fff;border:1px solid #e1e8f2;border-radius:20px;padding:7px;box-shadow:0 3px 7px #0f315517;scroll-margin-top:100px}
+#harga .price-service-image{display:block;width:100%;height:130px;object-fit:cover;border-radius:14px;background:#e5eaf0}
+#harga .price-service-body{display:flex;flex-direction:column;flex:1;padding:12px 7px 7px}
+#harga .price-service h3{display:flex;align-items:flex-start;gap:8px;font-family:Manrope,Inter,sans-serif;font-size:16px;font-weight:800;line-height:1.25;color:#0f2044;margin:0 0 8px}
+#harga .price-service-icon{flex-shrink:0;width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+#harga .price-service p{font-size:12px;line-height:1.6;color:#334459;margin:0 0 14px}
+#harga .price-service-value{color:#1559dc;font-size:27px;font-weight:850;letter-spacing:-.7px;line-height:1.25;margin-top:auto;margin-bottom:10px}
+#harga .price-service-value small{font-size:17px;letter-spacing:0;color:#0f2044;font-weight:750}
+#harga .price-service-value.is-quote{font-size:23px}
+#harga .price-service-cta{display:flex;align-items:center;justify-content:center;gap:7px;background:linear-gradient(180deg,#08b734,#00952b);color:white;border-radius:9px;text-decoration:none;min-height:44px;padding:10px 8px;font-weight:750;font-size:13px;line-height:1.3;text-align:center}
+#harga .price-service-cta:hover{background:#087c30}
+#harga a:focus-visible,#harga summary:focus-visible{outline:3px solid #1559dc;outline-offset:4px}
+#harga .price-service-cta svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.8}
+#harga .pricing-scope{font-size:13px;line-height:1.7;color:#536174;margin:20px 0 0;max-width:850px}
+#harga .other-prices{margin-top:20px;border-top:1px solid #cbdaf0;padding-top:14px}
+#harga .other-prices summary{cursor:pointer;min-height:44px;display:flex;align-items:center;justify-content:space-between;color:#163e77;font-weight:750;font-size:14px;list-style:none}
+#harga .other-prices summary::after{content:'+';font-size:22px}
+#harga .other-prices[open] summary::after{content:'−'}
+#harga .other-prices summary::-webkit-details-marker{display:none}
+#harga .other-prices-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:12px}
+#harga .other-price{background:#ffffffb3;border-radius:12px;padding:18px;scroll-margin-top:100px}
+#harga .other-price h3{font-size:16px;color:#0f2044;margin:0 0 8px}
+#harga .other-price p{font-size:13px;color:#536174;line-height:1.65;margin:0 0 12px}
+#harga .other-price strong{font-size:21px;color:#1559dc}
+@media(max-width:900px){#harga .price-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}#harga .price-service-image{height:160px}#harga .price-service h3{font-size:18px}}
+@media(max-width:520px){main>#harga{padding:30px 20px 34px!important}#harga .price-card-grid{grid-template-columns:1fr;gap:18px}#harga .price-service{padding:8px;border-radius:18px}#harga .price-service-image{height:175px}#harga .price-service-body{padding:15px 10px 10px}#harga .price-service h3{font-size:20px}#harga .price-service p{font-size:14px}#harga .price-service-value{font-size:30px;margin-top:4px}#harga .price-service-cta{font-size:14px;min-height:46px}#harga .other-prices-grid{grid-template-columns:1fr}}

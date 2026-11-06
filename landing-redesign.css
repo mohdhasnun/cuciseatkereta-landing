@@ -1,0 +1,180 @@
+/* Visual redesign: existing content and anchors are retained. */
+:root{--navy:#0b1f3b;--blue:#1e40ff;--text:#0b1f3b;--muted:#52647c;--blue-light:#edf3ff;--border:#dce5f1}
+body{font-family:Inter,'Segoe UI',system-ui,sans-serif;color:#0b1f3b;background:#fff}
+.site-header .nav-brand .brand-short,main h1,main h2,main h3{font-family:Manrope,Inter,'Segoe UI',sans-serif}
+.site-header .nav-brand .brand-short{font-weight:850;letter-spacing:-.7px!important}
+.site-header .nav-links a{font-weight:800}
+main .section-eyebrow{color:#1e40ff;font-weight:800;font-size:11px;letter-spacing:.3px!important;margin-bottom:10px}
+main .section-eyebrow::before{background:#1e40ff;height:3px;width:28px}
+main .section-title{color:#0b1f3b;font-weight:800;letter-spacing:-1px!important}
+main>.hero{min-height:440px;padding-top:32px;padding-bottom:32px}
+.hero .hero-sub{font-size:14px;line-height:1.65;margin-top:18px}
+.hero .hero-proof{margin-top:16px}
+.hero .hero-cta{margin-top:18px}
+.hero .google-review-bar{margin-top:12px}
+#servis-rawatan-bau{padding:30px 24px 28px}
+#servis-rawatan-bau .cases-heading{gap:36px;margin-bottom:20px}
+#servis-rawatan-bau .cases-heading h2{font-size:clamp(28px,3.1vw,40px);font-weight:850}
+#servis-rawatan-bau .cases-heading p{font-size:14px;line-height:1.65}
+.customer-case{grid-template-columns:minmax(0,1.65fr) minmax(0,1fr);padding:0;gap:22px;border:0;background:transparent;min-height:360px;align-items:stretch}
+.case-media{height:360px;align-self:center}
+.case-copy{padding:20px;border-radius:18px;background:linear-gradient(135deg,#f0f5ff,#dfebff);height:100%}
+.case-copy h3{font-size:22px;line-height:1.3;font-weight:800}
+.case-copy p{font-size:13px;line-height:1.7}
+.case-tag{background:#0b2d5c;color:#fff;font-size:10px;letter-spacing:.4px;padding:7px 10px}
+.case-copy .case-result{margin-top:12px;padding-left:12px}
+.cases-controls{margin-top:14px;gap:12px}
+.cases-footer{margin-top:18px;padding-top:18px}
+.cases-footer p{font-size:12px;line-height:1.7}
+.cases-footer a{font-size:12px;min-height:44px}
+.service-detail-panel{border-top:1px solid #d7e3f3;margin-top:18px;padding-top:8px;min-width:0}
+.service-detail-panel>summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:48px;font-size:13px;font-weight:750;color:#194b93;cursor:pointer}
+.service-detail-panel>summary::after{content:'+';font-size:24px;font-weight:500}
+.service-detail-panel[open]>summary::after{content:'−'}
+.service-detail-panel>summary::-webkit-details-marker{display:none}
+.service-detail-panel>summary:focus-visible{outline:3px solid #1559dc;outline-offset:3px}
+.service-detail-content{background:#fff;border-radius:16px;border:1px solid #e1e8f2;overflow:hidden;margin-top:10px}
+.service-detail-content>section{padding:32px 24px!important}
+.service-detail-content .container{max-width:100%}
+.service-detail-content h2.section-title{font-size:28px}
+.service-detail-content .about-grid{gap:28px}
+.service-detail-content .about-grid>img{height:320px}
+.service-detail-content .service-list h3{font-size:18px}
+.service-detail-content .section-desc{font-size:14px}
+.service-detail-content .mid-cta{padding:20px!important}
+.service-detail-content .cta-panel{margin:0;padding:28px}
+#harga .section-title{font-size:clamp(26px,2.5vw,34px);margin-bottom:12px}
+#harga>.container>.section-desc{margin-top:0;margin-bottom:22px;font-size:13px;line-height:1.7;max-width:960px}
+#harga .price-service h3{min-height:40px;font-size:16px;line-height:1.3;font-weight:850;order:0}
+#harga .price-service p{font-size:12px;line-height:1.65;order:1}
+#harga .price-service p.package-note{font-size:11px;line-height:1.65;color:#61718a;border:0;padding:0;margin:0 0 12px;order:2}
+#harga .price-service-value{font-size:27px;order:3;margin-top:auto}
+#harga .price-service-cta{order:4}
+#harga .other-prices-grid .pricing-card{padding:18px!important;border:1px solid #dbe5f3;border-radius:12px;background:#fff;margin:0}
+#harga .other-prices-grid h3{font-size:17px;margin:0 0 10px}
+#harga .other-prices-grid p{font-size:13px;line-height:1.7}
+#harga .other-prices-grid .service-price{font-size:23px;color:#1559dc;margin-top:12px}
+.trust-hub{display:grid;grid-template-columns:1.1fr .85fr 1.1fr;gap:26px;max-width:1248px;margin:0 auto;padding:32px 24px 28px;background:#fff;align-items:start}
+.trust-hub>section{padding:0!important;min-width:0;background:#fff}
+.trust-hub>section+section{border-left:1px solid #bbd1f5;padding-left:26px!important}
+.trust-hub .container{padding:0;width:100%;max-width:none}
+.trust-hub .section-title,.trust-hub h2{font-size:22px;font-weight:850;line-height:1.3;letter-spacing:-.7px!important;margin:0 0 12px;color:#0b1f3b}
+.trust-hub #lokasi .section-title,.trust-hub #ulasan .section-title{font-size:22px;line-height:1.3}
+.trust-hub .section-eyebrow{font-size:10px;line-height:1.5;gap:6px}
+.trust-hub .section-eyebrow::before{width:22px}
+.trust-hub p.section-desc{font-size:12px;line-height:1.7;margin:0 0 16px;max-width:none}
+.trust-hub .testi-grid{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0;padding:0 0 10px;scrollbar-width:thin;scrollbar-color:#bed0eb transparent;overscroll-behavior-x:contain}
+.trust-hub .testi-card{flex:0 0 100%;min-width:0;scroll-snap-align:start;border:1px solid #e1e8f2;border-radius:14px;background:#fff;box-shadow:0 3px 8px #0b1f3b0e;padding:18px;box-sizing:border-box;display:flex;flex-direction:column;align-self:stretch}
+.trust-hub .testi-text{font-size:13px;line-height:1.75;margin:12px 0;overflow-wrap:anywhere}
+.trust-hub .review-person{gap:9px}
+.trust-hub .testi-name{font-size:13px}
+.trust-hub .testi-car{font-size:10px}
+.trust-hub .stars{font-size:16px;margin-top:12px;color:#edb20b}
+.trust-hub .review-source{font-size:10px;margin-top:auto}
+.review-controls{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:6px;font-size:10px;color:#63728a}
+.review-controls[hidden]{display:none}
+.review-controls button{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;border:1px solid #dce5f1;background:white;color:#194b93;cursor:pointer;font-size:20px}
+.review-controls button:focus-visible{outline:3px solid #1559dc;outline-offset:2px}
+.guarantee-shield{width:44px;height:44px;display:block;margin:14px 0}
+.guarantee-panel p{font-size:13px;line-height:1.8;color:#465874;margin:12px 0}
+.trust-hub .location-grid{display:block}
+.trust-hub .location-copy .section-desc{font-size:12px;margin:10px 0!important}
+.location-more{margin-bottom:12px}
+.location-more summary{font-size:12px;color:#194b93;font-weight:650;cursor:pointer;min-height:36px}
+.trust-hub .coverage-list{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0}
+.trust-hub .coverage-list span{font-size:10px;padding:4px 7px;border:1px solid #dbe5f3;border-radius:5px}
+.trust-hub #map-fallback{padding:0;border:0;background:transparent;border-radius:0;margin:0;color:#465874;font-size:12px}
+.trust-hub #map-fallback>strong{font-size:14px;color:#0b1f3b}
+.trust-hub #map-fallback>p{font-size:12px;line-height:1.8;margin:10px 0}
+.trust-hub #map-fallback>a{display:flex;align-items:center;justify-content:center;min-height:44px;border:1px solid #16a34a;border-radius:9px;color:#128039;background:#fff;text-decoration:none;font-size:12px;font-weight:750;padding:8px}
+.trust-hub .compact-map,.trust-hub .compact-map #shop-map{height:150px}
+.trust-hub .compact-map{margin-top:12px;border-radius:12px}
+main>.faq{background:linear-gradient(100deg,#092b53f5,#061c36f5),url('assets/seat-hitam-selepas.webp') left center/cover;border-radius:22px;margin:0 max(16px,calc((100% - 1260px)/2)) 20px;padding:30px 26px!important}
+.faq>.container{display:grid;grid-template-columns:1fr 1.65fr .75fr;gap:24px;max-width:1200px;align-items:center}
+.faq .faq-header{grid-column:1;grid-row:1;min-width:0}
+.faq .section-eyebrow{color:#fff;font-size:10px}
+.faq .section-eyebrow::before{background:#facc15}
+.faq .section-title{color:#fff;font-size:29px;line-height:1.25;font-weight:850;margin:16px 0}
+.faq .faq-list{grid-column:2;grid-row:1;border-left:1px solid #7796bc;padding-left:24px;display:grid;gap:8px;min-width:0}
+.faq .faq-card{grid-column:auto;margin:0;border:0;background:#fff;border-radius:10px;padding:6px 13px}
+.faq .faq-card summary{font-size:12px;line-height:1.5;min-height:40px;color:#0b1f3b;font-weight:750}
+.faq .faq-card p{font-size:12px;line-height:1.8;margin:8px 0;color:#52647c}
+.faq .faq-whatsapp{grid-column:3;grid-row:1;min-height:64px;padding:17px 12px;font-size:15px;border-radius:13px;background:linear-gradient(180deg,#08b734,#00952b)}
+.faq .booking-detail{max-width:1200px;margin:24px auto 0;border-color:#ffffff40}
+.faq .booking-detail>summary{color:#fff}
+.faq .booking-detail .cta-bottom{margin:12px 0 0;padding:24px;background:#0a2344;border-radius:12px}
+.faq .booking-detail .cta-bottom h2{font-size:28px}
+.landing-footer{padding:30px max(24px,calc((100% - 1200px)/2)) 24px;background:#061b30;color:#edf3ff;text-align:left}
+.footer-columns{display:grid;grid-template-columns:1fr .7fr 1fr;gap:34px;align-items:start}
+.footer-columns>div,.footer-columns>nav{min-width:0}
+.footer-columns>nav,.footer-columns>div+div{border-left:1px solid #36516f;padding-left:28px}
+.footer-brand>img{float:left;margin-right:10px;object-fit:contain}
+.footer-brand>strong{display:block;font:800 17px/1.4 Manrope,Inter,sans-serif;color:#fff;padding-top:3px}
+.footer-brand>span{font-size:11px;color:#d1deec}
+.landing-footer .pay-strip-wrap{clear:both;padding:18px 0 0;background:transparent;border:0;margin:0;display:block;text-align:left}
+.landing-footer .pay-label{font-size:9px;color:#b2c3d8;margin-bottom:8px;display:block}
+.landing-footer .pay-strip{gap:6px;display:flex;flex-wrap:wrap;justify-content:flex-start}
+.landing-footer .pay-chip{background:#fff;border:0;padding:4px 7px;border-radius:4px;min-width:0;min-height:24px}
+.landing-footer .pay-chip img{width:auto;height:12px;max-width:52px;object-fit:contain}
+.footer-links{position:static;display:flex;flex-direction:column;gap:8px;background:transparent;backdrop-filter:none;box-shadow:none;padding:0;color:white;align-items:flex-start}
+.landing-footer .footer-links{justify-content:flex-start}
+.landing-footer .footer-links a{min-height:24px}
+.footer-brand>img{border-radius:50%}
+.footer-links>strong,.footer-contact>strong{font-size:14px;color:#fff;margin-bottom:7px}
+.footer-links a,.footer-contact a{font-size:12px;color:#edf3ff;text-decoration:none;line-height:1.7}
+.footer-links a:hover,.footer-contact a:hover{text-decoration:underline}
+.footer-contact p{font-size:12px;line-height:1.9;color:#cedbeb;margin-top:10px}
+.footer-contact p:last-child{opacity:1!important;border-top:1px solid #36516f;padding-top:12px;font-size:10px}
+@media(max-width:1000px){
+ .trust-hub{grid-template-columns:1fr 1fr;gap:24px}
+ .trust-hub>#lokasi{grid-column:1/-1;border-left:0;border-top:1px solid #bbd1f5;padding:24px 0 0!important}
+ .trust-hub #lokasi .location-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+ .faq>.container{grid-template-columns:1fr 1.7fr}
+ .faq .faq-whatsapp{grid-column:1;grid-row:2;align-self:start}
+ .faq .faq-list{grid-row:1 / span 2}
+ .customer-case{grid-template-columns:minmax(0,1.3fr) minmax(0,1fr)}
+}
+@media(max-width:760px){
+ #harga .price-card-grid{grid-template-columns:1fr}
+ main>.hero{padding:32px 20px;min-height:590px}
+ #servis-rawatan-bau{padding:30px 20px}
+ #servis-rawatan-bau .cases-heading{grid-template-columns:1fr;gap:16px}
+ .customer-case{grid-template-columns:1fr;gap:16px;min-height:0}
+ .case-media,.case-video-wrap video{height:290px}
+ .case-copy{padding:20px;min-height:375px}
+ .case-copy h3{font-size:23px}
+ .case-copy p{font-size:14px}
+ .cases-footer{gap:16px}
+ .cases-footer a{font-size:13px;min-height:46px}
+ .service-detail-content>section{padding:26px 18px!important}
+ .service-detail-content .about-grid{grid-template-columns:1fr}
+ .service-detail-content .why-grid,.service-detail-content .problem-grid{grid-template-columns:1fr}
+ .trust-hub{grid-template-columns:1fr;padding:28px 20px;gap:26px}
+ .trust-hub>section+section{border-left:0;border-top:1px solid #bbd1f5;padding:26px 0 0!important}
+ .trust-hub>#lokasi{grid-column:auto}
+ .trust-hub #lokasi .location-grid{display:block}
+ .trust-hub .section-title,.trust-hub h2{font-size:25px}
+ .trust-hub #lokasi .section-title,.trust-hub #ulasan .section-title{font-size:25px}
+ .trust-hub p.section-desc,.guarantee-panel p,.trust-hub #map-fallback>p{font-size:14px}
+ .trust-hub .testi-text{font-size:15px}
+ .trust-hub .testi-card{padding:20px}
+ .trust-hub .testi-name{font-size:15px}
+ .trust-hub .testi-car{font-size:12px}
+ .trust-hub .compact-map,.trust-hub .compact-map #shop-map{height:220px}
+ .trust-hub #map-fallback>a{font-size:14px}
+ main>.faq{margin:0 12px 16px;padding:28px 20px!important;border-radius:18px}
+ .faq>.container{display:flex;flex-direction:column;align-items:stretch;gap:20px}
+ .faq .faq-list{border-left:0;padding-left:0;gap:10px}
+ .faq .section-title{font-size:29px;margin:12px 0 0}
+ .faq .faq-card{padding:8px 14px}
+ .faq .faq-card summary,.faq .faq-card p{font-size:14px}
+ .faq .faq-whatsapp{align-self:stretch;font-size:16px;min-height:52px}
+ .faq .booking-detail .cta-bottom{padding:20px 0}
+ .faq .booking-detail .booking-steps{grid-template-columns:1fr}
+ .landing-footer{padding:28px 20px}
+ .footer-columns{grid-template-columns:1fr;gap:24px}
+ .footer-columns>nav,.footer-columns>div+div{border-left:0;border-top:1px solid #36516f;padding:22px 0 0}
+ .landing-footer .footer-links a{font-size:14px;min-height:38px;display:flex;align-items:center}
+ .footer-contact p,.footer-contact a{font-size:14px}
+}
+@media(prefers-reduced-motion:reduce){.testi-grid{scroll-behavior:auto}}
