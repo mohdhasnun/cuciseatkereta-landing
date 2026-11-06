@@ -1,0 +1,66 @@
+/* Header and hero only: the remaining landing-page sections are unchanged. */
+.site-header{top:0}
+.site-header .top-strip{display:none}
+.site-header nav{padding:8px max(24px,calc((100% - 1200px)/2));gap:24px}
+.site-header .brand-logo{width:48px;height:48px;flex-basis:48px}
+.site-header .nav-brand .brand-short{font-size:19px;font-weight:800;color:#08172e}
+.site-header .nav-brand .brand-text>span{font-size:11px;color:#102e50;margin-top:0}
+.site-header .nav-links a{font-size:13px;font-weight:750;color:#0f2044}
+.site-header .nav-wa{border:0;border-radius:12px;min-height:44px;background:linear-gradient(180deg,#08bc3a,#009928);padding:11px 17px}
+main>.hero{display:block;position:relative;min-height:480px;padding:40px max(24px,calc((100% - 1200px)/2));background:#041b30;overflow:hidden;isolation:isolate;align-content:center}
+.hero>.hero-image{position:absolute!important;inset:0 0 0 auto!important;width:65%!important;height:100%!important;min-height:0!important;margin:0!important;border-radius:0!important;z-index:-2}
+.hero>.hero-image img{width:100%;height:100%;object-fit:cover;object-position:50% 52%;border-radius:0}
+.hero>.hero-image figcaption{display:none}
+.hero::after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#031b30 0%,#031b30f5 33%,#031b30aa 53%,#031b3026 80%);pointer-events:none}
+.hero>.hero-image{z-index:0!important}
+.hero::after{z-index:1}
+.hero>.hero-copy{position:relative;z-index:2;width:62%!important;max-width:710px}
+.hero .hero-badge{display:inline-flex;width:auto;gap:7px;background:#ffffff24;color:#fff;border-radius:24px;padding:5px 11px;margin:0 0 14px;font-size:12px;letter-spacing:0!important}
+.hero .hero-badge::before{content:'●';background:none;color:#fff;font-size:10px;width:auto;height:auto}
+.hero h1{font-family:Manrope,Inter,'Segoe UI',sans-serif;font-size:clamp(32px,3.7vw,46px);font-weight:800;line-height:1.12;letter-spacing:-1.5px!important;max-width:710px;color:#fff}
+.hero h1 em{color:#ffd526;text-decoration-color:#ffd526;text-decoration-thickness:4px;text-underline-offset:7px}
+.hero .hero-sub{color:#edf3fa;font-size:15px;line-height:1.65;max-width:480px;margin:20px 0 0}
+.hero .price-signal{color:#e6eef7;font-size:13px;margin-top:12px}
+.hero .price-signal strong{color:#fff}
+.hero .hero-proof{display:flex;flex-wrap:wrap;gap:12px 18px;justify-content:flex-start;width:100%;background:none;border:0;padding:0;margin:18px 0 0}
+.hero .hero-proof>span{font-size:11px;line-height:1.5;color:#fff;border:0;padding:0;max-width:180px;gap:7px}
+.hero .hero-proof .trust-emoji{font-size:20px;flex-basis:24px}
+.hero .hero-cta{margin-top:24px;gap:12px}
+.hero .hero-cta .btn-primary{background:linear-gradient(180deg,#08bc3a,#009928);border:1px solid #00c83c;border-radius:11px;color:#fff;font-size:14px;min-height:48px}
+.hero .hero-cta .btn-outline{background:#071a2c80;border:1px solid #fff;color:#fff;border-radius:11px;font-size:14px;min-height:48px}
+.hero .google-review-bar{background:#ffffff12;border:1px solid #ffffff45;color:#fff;margin-top:16px;padding:7px 12px;border-radius:9px}
+.hero .google-review-copy,.hero .google-review-copy strong,.hero .google-review-copy b,.hero .review-arrow{color:#fff}
+@media(min-width:961px) and (max-width:1100px){
+ .site-header nav{grid-template-columns:minmax(245px,1fr) auto auto;gap:15px}
+ .site-header .header-toggle{display:none}
+ .site-header.menu-ready .nav-links:not(.is-open),.site-header .nav-links{display:flex;grid-column:2;grid-row:1;gap:16px;width:auto;border:0;padding:0}
+ .site-header .nav-links a{font-size:12px}
+ .site-header .nav-wa{grid-column:3}
+}
+@media(max-width:960px){
+ .site-header nav{padding:9px 20px}
+ .site-header .nav-brand .brand-short{font-size:16px}
+ .site-header .nav-links{background:#fff}
+ main>.hero{min-height:500px;padding:36px 24px}
+ .hero>.hero-copy{width:72%!important}
+ .hero h1{font-size:36px}
+}
+@media(max-width:600px){
+ .site-header nav{grid-template-columns:minmax(0,1fr) 44px;padding:8px 16px;gap:8px}
+ .site-header .brand-logo{width:40px;height:40px;flex-basis:40px}
+ .site-header .nav-brand .brand-short{font-size:15px}
+ .site-header .nav-brand .brand-text>span{font-size:9px}
+ .site-header .nav-wa{grid-column:1/-1;grid-row:2;justify-self:stretch;max-width:none;min-height:40px;padding:8px 12px}
+ main>.hero{padding:34px 20px;min-height:590px}
+ .hero>.hero-copy{width:100%!important;max-width:none}
+ .hero>.hero-image{width:100%!important;opacity:.55}
+ .hero>.hero-image img{object-position:55% 50%}
+ .hero::after{background:linear-gradient(90deg,#031b30ef,#031b30a6),linear-gradient(0deg,#031b30e6,transparent)}
+ .hero h1{font-size:32px;line-height:1.15;letter-spacing:-1px!important}
+ .hero .hero-sub{font-size:14px;line-height:1.7;max-width:100%}
+ .hero .hero-proof{gap:12px;margin-top:20px}
+ .hero .hero-proof>span{font-size:10px;max-width:145px}
+ .hero .hero-cta{margin-top:24px}
+ .hero .hero-cta .btn-outline{color:#fff}
+ .hero .google-review-bar{max-width:100%}
+}

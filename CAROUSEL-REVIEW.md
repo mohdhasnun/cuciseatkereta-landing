@@ -13,3 +13,4 @@ Validation: JavaScript syntax, Git whitespace checks, metadata/schema/conversion
 Local preview: run `python -m http.server 8766 --bind 127.0.0.1` in this directory, then open `http://127.0.0.1:8766/#servis-rawatan-bau`.
 
 Before production: owner review of desktop/mobile preview and confirmation to publish.
+`nHeader/hero update: compact white navigation and full-width navy image treatment, white headline with yellow emphasis, green WhatsApp action. Uses the existing real workshop photo. Price and review values remain unchanged. Added FAQ navigation anchor and moved existing assurance items into the hero. Checked 320, 390, 768, 980 and 1440 px; no overflow. Mobile menu and FAQ anchor verified.
