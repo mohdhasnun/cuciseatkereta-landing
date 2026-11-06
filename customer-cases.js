@@ -24,11 +24,20 @@
   root.querySelector('[data-case-next]').addEventListener('click', () => show(current + 1));
   dots.forEach((dot, i) => dot.addEventListener('click', () => show(i)));
   root.addEventListener('keydown', event => {
-    if (event.target.closest('video,a')) return;
+    if (event.target.closest('video,a,input')) return;
     const actions = { ArrowLeft: current - 1, ArrowRight: current + 1, Home: 0, End: slides.length - 1 };
     if (!(event.key in actions)) return;
     event.preventDefault();
     show(actions[event.key]);
+  });
+  root.querySelectorAll('.case-compare').forEach(compare => {
+    const range = compare.querySelector('input[type="range"]');
+    const update = () => {
+      compare.style.setProperty('--reveal', `${range.value}%`);
+      range.setAttribute('aria-valuetext', `${range.value}% gambar sebelum ditunjukkan`);
+    };
+    range.addEventListener('input', update);
+    update();
   });
   const video = root.querySelector('video');
   const play = root.querySelector('.case-play');
