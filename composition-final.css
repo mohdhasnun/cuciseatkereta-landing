@@ -116,18 +116,18 @@ main>.assurance-location{background:var(--surface)}
 .assurance-location .compact-map #shop-map{width:100%;height:340px;margin:0;display:block;border:0;border-radius:0}
 .assurance-location a:focus-visible{outline:3px solid #1d4ed8;outline-offset:4px}
 /* Wide FAQ: a heading/contact row, then full-width native accordions. */
-main>.faq{margin:0;padding:60px 24px!important;border-radius:0;background:#0b2545;color:#fff}
+main>.faq{margin:0;padding:56px 24px!important;border-radius:0;background:#0b2545;color:#fff}
 .faq>.container{display:grid;grid-template-columns:minmax(0,1fr) minmax(240px,320px);gap:28px 40px;align-items:start;width:100%;max-width:var(--content-width)}
 .faq .faq-header{grid-column:1;grid-row:1;padding:0;min-width:0}
 .faq .section-eyebrow{font-size:12px;color:#d7e4f6}
 .faq .section-title{font-size:clamp(28px,2.7vw,36px);font-weight:700;line-height:1.25;color:#fff;margin:0 0 16px;max-width:750px}
 .faq .faq-intro{font-size:16px;line-height:1.8;color:#d7e4f6;margin:0;max-width:680px}
-.faq .faq-contact{grid-column:2;grid-row:1;display:flex;flex-direction:column;align-items:flex-end;gap:14px;min-width:0}
+.faq .faq-contact{grid-column:2;grid-row:1;display:flex;flex-direction:column;align-items:flex-end;gap:0;min-width:0;padding-top:24px}
 .faq .faq-contact>.faq-whatsapp{display:inline-flex;align-items:center;justify-content:center;width:auto;min-height:48px;padding:13px 22px;background:var(--action-green);border-radius:8px;font-size:16px;font-weight:700;line-height:1.5;margin:0;color:#fff;text-decoration:none}
 .faq .faq-contact p{font-size:14px;line-height:1.85;color:#d7e4f6;text-align:right;margin:0;max-width:320px}
-.faq .faq-list{grid-column:1/-1;grid-row:2;display:grid;grid-template-columns:1fr;gap:9px;padding:0;border:0;min-width:0;width:100%;max-width:none}
+.faq .faq-list{grid-column:1/-1;grid-row:2;display:grid;grid-template-columns:1fr;gap:8px;padding:0;border:0;min-width:0;width:100%;max-width:none}
 .faq .faq-card{width:100%;max-width:none;margin:0;padding:0;border:0;border-radius:10px;background:#fff;box-shadow:none}
-.faq .faq-card summary{display:flex;justify-content:space-between;align-items:center;gap:24px;min-height:56px;padding:12px 20px;list-style:none;font-size:17px;font-weight:650;line-height:1.5;color:var(--ink);cursor:pointer}
+.faq .faq-card summary{display:flex;justify-content:space-between;align-items:center;gap:24px;min-height:54px;padding:12px 20px;list-style:none;font-size:17px;font-weight:650;line-height:1.5;color:var(--ink);cursor:pointer}
 .faq .faq-card summary::-webkit-details-marker{display:none}
 .faq .faq-card summary::after{content:'+';font-size:25px;font-weight:500;line-height:1;flex:0 0 24px;float:none;transform:none;color:#1d4ed8}
 .faq .faq-card[open] summary::after{content:'\2212';transform:none}
@@ -137,21 +137,22 @@ main>.faq{margin:0;padding:60px 24px!important;border-radius:0;background:#0b254
 .faq :focus-visible{outline:3px solid #fff;outline-offset:5px}
 .faq .faq-card summary:focus-visible{outline:3px solid #1d4ed8;outline-offset:3px}
 /* Direct navy transition; a quiet border separates the compact footer. */
-.landing-footer{margin-top:0;padding:44px 24px 16px;background:#061b30;border:0;border-top:1px solid #29425f;text-align:left;color:#e5edf8}
-.footer-columns{display:grid;grid-template-columns:1.1fr .85fr 1fr;gap:40px;align-items:start}
+.landing-footer{margin-top:0;padding:40px 24px 16px;background:#061b30;border:0;border-top:1px solid #29425f;text-align:left;color:#e5edf8}
+.footer-columns{display:grid;grid-template-columns:.95fr 1.1fr 1fr;gap:32px;align-items:start}
 .footer-columns>div,.footer-columns>nav{min-width:0;border:0;padding:0}
 .footer-brand-mark{display:flex;align-items:center;gap:12px}
 .footer-brand-mark>img{width:48px;height:48px;object-fit:contain;border-radius:50%;flex-shrink:0}
 .footer-brand-mark strong{display:block;font:700 17px/1.4 Manrope,Inter,sans-serif;color:#fff}
 .footer-brand-mark span{display:block;font-size:12px;line-height:1.7;color:#cad8eb;margin-top:2px}
-.landing-footer .footer-links{position:static;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:0;padding:0;border:0;background:none;box-shadow:none}
+.landing-footer .footer-links{position:static;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;justify-content:start;gap:0 16px;padding:0;border:0;background:none;box-shadow:none}
 .landing-footer .footer-links>strong,.footer-contact>strong{font-size:16px;font-weight:700;line-height:1.5;color:#fff;margin-bottom:8px}
-.landing-footer .footer-links>a,.landing-footer .footer-contact>a{display:flex;align-items:center;min-height:40px;font-size:14px;line-height:24px;color:#e5edf8;text-decoration:none}
+.landing-footer .footer-links>a,.landing-footer .footer-contact>a{display:flex;align-items:center;min-height:36px;font-size:14px;line-height:24px;color:#e5edf8;text-decoration:none}
+.landing-footer .footer-links>strong{grid-column:1/-1}
 .landing-footer .footer-contact>strong{display:block}
 .landing-footer .footer-contact p{font-size:15px;line-height:1.8;color:#cad8eb;margin:0 0 12px}
 .landing-footer a:hover{text-decoration:underline;text-underline-offset:4px}
 .landing-footer a:focus-visible{outline:3px solid #fff;outline-offset:4px}
-.footer-bottom{border-top:1px solid #29425f;padding-top:16px;margin-top:24px}
+.footer-bottom{border-top:1px solid #29425f;padding-top:12px;margin-top:20px}
 .landing-footer .footer-bottom p{font-size:12px;line-height:1.7;color:#cad8eb;opacity:1!important;margin:0!important;padding:0;border:0}
 @media(max-width:1100px){
  #harga .price-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -176,10 +177,11 @@ main>.faq{margin:0;padding:60px 24px!important;border-radius:0;background:#0b254
  .assurance-location-grid{grid-template-columns:1fr;gap:24px}
  .assurance-location .compact-map,.assurance-location .compact-map #shop-map{height:320px}
  .faq>.container{grid-template-columns:1fr;gap:28px}
- .faq .faq-contact{grid-column:1;grid-row:2;align-items:flex-start;gap:12px}
+ .faq .faq-contact{grid-column:1;grid-row:2;align-items:flex-start;gap:0;padding-top:0}
  .faq .faq-contact p{text-align:left;max-width:600px}
  .faq .faq-list{grid-column:1;grid-row:3}
- .footer-columns{grid-template-columns:1.1fr .85fr 1fr;gap:24px}
+ .footer-columns{grid-template-columns:.95fr 1.1fr 1fr;gap:24px}
+ .landing-footer .footer-links{grid-template-columns:1fr}
  .footer-brand{grid-column:auto}
 }
 @media(max-width:600px){
@@ -212,7 +214,7 @@ main>.faq{margin:0;padding:60px 24px!important;border-radius:0;background:#0b254
  .assurance-location .compact-map,.assurance-location .compact-map #shop-map{height:280px}
  .location-directions>a{display:flex;width:100%;padding:12px 14px}
  .assurance-location #map-fallback .location-directions>a{display:flex;width:100%;padding:12px 14px}
- main>.faq{padding:44px 20px!important}
+ main>.faq{padding:40px 20px!important}
  .faq>.container{display:grid;gap:24px}
  .faq .faq-header{grid-column:1;grid-row:1}
  .faq .faq-contact{width:100%;align-items:stretch}
@@ -222,7 +224,7 @@ main>.faq{margin:0;padding:60px 24px!important;border-radius:0;background:#0b254
  .faq .faq-card summary{font-size:16px;line-height:1.5;gap:16px;padding:12px 16px}
  .faq .faq-card p{padding-inline:16px}
  .faq .faq-card p{font-size:16px}
- .landing-footer{margin-top:0;padding:36px 20px 16px}
+ .landing-footer{margin-top:0;padding:32px 20px 16px}
  .footer-columns{grid-template-columns:1fr;gap:24px}
  .footer-brand{grid-column:auto}
  .landing-footer .footer-links>a,.landing-footer .footer-contact>a{min-height:44px;font-size:15px}
