@@ -11,7 +11,7 @@ main .section-desc{font-size:16px;line-height:1.75;color:var(--body-copy)}
 .site-header .nav-wa{min-height:44px}
 /* A single shared case-study shell, rather than a floating story card. */
 #servis-rawatan-bau .cases-heading{margin-bottom:32px}
-#servis-rawatan-bau .cases-heading h2{font-size:clamp(30px,3vw,40px);font-weight:700;line-height:1.2;letter-spacing:-.8px}
+#servis-rawatan-bau .cases-heading h2{font-family:var(--font-display);font-size:clamp(28px,2.7vw,36px);font-weight:700;line-height:1.23;letter-spacing:-.8px}
 #servis-rawatan-bau .cases-heading p{font-size:16px;line-height:1.75;max-width:800px;margin-top:16px;color:var(--body-copy)}
 #servis-rawatan-bau .customer-case{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:0;align-items:stretch;min-height:440px;border:1px solid #dce5f1;border-radius:16px;background:#fff;overflow:hidden;margin:0}
 #servis-rawatan-bau .customer-case[hidden]{display:none}
@@ -188,7 +188,7 @@ main>.faq{margin:0;padding:56px 24px!important;border-radius:0;background:#0b254
  main>#servis-rawatan-bau,main>#harga,main>#hasil,main>#kenapa-kami,main>#ulasan,main>.assurance-location{padding:44px 20px!important}
  main .section-title,#rawatan-bau-title,.assurance-location h2{font-size:28px;line-height:1.25}
  #servis-rawatan-bau .cases-heading{margin-bottom:24px}
- #servis-rawatan-bau .cases-heading h2{font-size:30px}
+ #servis-rawatan-bau .cases-heading h2{font-size:28px;line-height:1.25}
  #servis-rawatan-bau .cases-heading p{font-size:16px}
  #servis-rawatan-bau .customer-case .case-media{height:290px;min-height:290px}
  #servis-rawatan-bau .case-copy{padding:24px 20px}
