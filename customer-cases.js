@@ -30,7 +30,7 @@
     event.preventDefault();
     show(actions[event.key]);
   });
-  root.querySelectorAll('.case-compare').forEach(compare => {
+  document.querySelectorAll('.case-compare').forEach(compare => {
     const range = compare.querySelector('input[type="range"]');
     const update = () => {
       compare.style.setProperty('--reveal', `${range.value}%`);

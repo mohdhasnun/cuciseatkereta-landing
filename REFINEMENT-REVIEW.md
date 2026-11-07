@@ -37,3 +37,9 @@ Source: https://www.google.com/maps/place/Cuci+Seat,+Kusyen,+Karpet+Kereta+l+Pak
 - JavaScript syntax, local media existence, HTML invariants and Git whitespace checks passed. This static site has no package build; no bundle build is required. No synthetic Ads conversion was sent, and no physical-device/Lighthouse benchmark was performed.
 
 Preview: `http://127.0.0.1:8766/`. Before screenshots remain in `outputs/redesign-desktop.png` and `outputs/redesign-mobile.png`; final screenshots use the `refinement-` prefix. Content and browser audit results are saved alongside them. Production publication awaits explicit owner approval.
+
+## Follow-up — 7 November 2026
+
+Removed the repeated case-footer price/WhatsApp prompt as requested; nine valid WhatsApp CTAs remain. The case introduction now follows its heading at every viewport. FAQ background now runs edge-to-edge with no outside margin or rounded corners. All three gallery pairs now use accessible draggable before/after sliders with the original images and alt text. The existing comparison initializer is shared across the two case comparisons and three gallery comparisons.
+
+Checked 390, 768, 980 and 1440 px: FAQ edges match the document edges, the introduction is below the heading, and there is no horizontal overflow. Gallery mouse drag and keyboard endpoints update the reveal percentage. Metadata, schema, prices, FAQ answers, three customer stories and conversion code remain unchanged. JavaScript syntax and content regression checks pass. Changes remain on the development branch only.

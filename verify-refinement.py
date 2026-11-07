@@ -41,6 +41,8 @@ checks={
  'all_local_media_exist':all(Path(x).is_file() for x in b.media),
  'booking_route_unchanged':Path('book/index.html').read_text(encoding='utf-8')==subprocess.check_output(['git','show','a91278d:book/index.html']).decode(),
  'three_advantages':len(parts(parts(new,r'<div class="refinement-advantages">(.*?)</div>')[0],r'<article>'))==3,
+ 'three_gallery_comparison_sliders':new.count('class="case-media case-compare gallery-compare"')==3,
+ 'duplicate_case_footer_removed':'class="cases-footer"' not in new,
  'redundant_panels_removed':all(x not in new for x in ('class="service-overview"','class="about"','class="mid-cta"','class="problems"','booking-detail','Butiran servis, skop cucian &amp; tentang kedai kami')),
  'lighter_text_content':len(b.text)<len(a.text)
 }
