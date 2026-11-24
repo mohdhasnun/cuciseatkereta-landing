@@ -1,5 +1,7 @@
 # Exclude development evidence from the existing GitHub Pages build.
 exclude:
+  # English pages remain development drafts pending separate approval.
+  - en
   - CAROUSEL-REVIEW.md
   - FINAL-COMPOSITION-REVIEW.md
   - IMAGE-NOTES.md

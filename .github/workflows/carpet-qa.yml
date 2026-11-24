@@ -1,0 +1,69 @@
+name: Carpet BM build and QA (no deployment)
+on:
+  push:
+    branches: ["qa/carpet-bm-20261124"]
+  pull_request:
+    branches: ["main"]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build-and-audit:
+    if: github.ref != 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build with GitHub Pages Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+      - name: Check actual publish output
+        shell: python
+        run: |
+          import pathlib, re, json, xml.etree.ElementTree as ET
+          root = pathlib.Path('_site')
+          for f in ['index.html', 'cuci-karpet-kereta/index.html', 'service-guide.css', 'book/index.html', 'wasap/index.html', 'CNAME', 'robots.txt', 'sitemap.xml']:
+              assert (root/f).is_file(), f
+          assert not (root/'en').exists()
+          bad = [str(p) for p in root.rglob('*') if p.is_file() and (p.suffix in ['.md','.cjs','.py','.yml'] or re.search(r'(?:^|/)(?:verify-|qa-|phase1-|preview-|backup|screenshot)', p.relative_to(root).as_posix(), re.I))]
+          assert not bad, bad
+          ns = {'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
+          urls = [x.text for x in ET.parse(root/'sitemap.xml').findall('.//s:loc', ns)]
+          assert urls == ['https://cuciseatkereta.com/', 'https://cuciseatkereta.com/cuci-karpet-kereta/'], urls
+          for route in ['', 'cuci-karpet-kereta/']:
+              html = (root/route/'index.html').read_text()
+              for tag in ['title','h1']:
+                  assert len(re.findall(r'<' + tag + r'\b', html, re.I)) == 1
+              assert len(re.findall(r'<meta\s+name="description"', html)) == 1
+              assert 'href="https://cuciseatkereta.com/' + route + '"' in html
+              assert not re.search(r'<meta[^>]+noindex', html, re.I)
+              assert 'AW-723532476/Mm2cCPKwpIkdELz1gNkC' in html
+              for data in re.findall(r'<script type="application/ld\+json">(.*?)</script>', html, re.S): json.loads(data)
+          carpet = (root/'cuci-karpet-kereta/index.html').read_text()
+          assert '../service-guide.css' in carpet and '<footer' in carpet
+          print('PASS: actual Jekyll output checks')
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Lighthouse mobile and desktop (external tracking blocked)
+        run: |
+          mkdir -p "$RUNNER_TEMP/lighthouse"
+          python3 -m http.server 8080 --directory _site > "$RUNNER_TEMP/server.log" 2>&1 &
+          for i in $(seq 1 20); do curl -fsS http://localhost:8080/ > /dev/null && break; sleep 1; done
+          for page in home carpet; do
+            url=http://localhost:8080/
+            if [ "$page" = carpet ]; then url=http://localhost:8080/cuci-karpet-kereta/; fi
+            for mode in mobile desktop; do
+              preset=""
+              if [ "$mode" = desktop ]; then preset="--preset=desktop"; fi
+              npx --yes lighthouse@12.8.2 "$url" $preset --chrome-flags="--headless --no-sandbox" --blocked-url-patterns="*googletagmanager.com/*,*google-analytics.com/*,*googleadservices.com/*,*doubleclick.net/*,*wa.me/*" --output=json --output=html --output-path="$RUNNER_TEMP/lighthouse/$page-$mode" --only-categories=performance,accessibility,best-practices,seo
+            done
+          done
+      - name: Save QA reports only
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: carpet-lighthouse-qa
+          path: ${{ runner.temp }}/lighthouse/
+          retention-days: 14

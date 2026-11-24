@@ -1,0 +1,93 @@
+/* Shared guide primitives; no homepage stylesheets are required by the BM guide. */
+.guide-page,.guide-page *,.guide-page *::before,.guide-page *::after{box-sizing:border-box}
+body.guide-page{margin:0;font-family:Inter,'Segoe UI',Arial,sans-serif;color:#52647c}
+.guide-page h1,.guide-page h2,.guide-page h3,.guide-page p,.guide-page figure{margin:0}
+.guide-page button,.guide-page a{-webkit-tap-highlight-color:transparent}
+.guide-page .site-header .top-strip{display:none}
+.guide-page .site-header nav{padding:8px max(24px,calc((100% - 1200px)/2));gap:24px}
+.guide-page .site-header .brand-logo{width:48px;height:48px;flex-basis:48px}
+.guide-page .site-header .brand-short{display:block;font-size:19px;font-weight:800;color:#08172e}
+.guide-page .site-header .brand-text>span{display:block;font-size:11px;color:#102e50;margin-top:0}
+.guide-page .site-header .nav-links a{font-size:13px;font-weight:750;color:#0f2044}
+.guide-page .site-header .nav-wa{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;background:#087c30;border:0;border-radius:12px;min-height:44px;padding:11px 17px}
+.guide-skip{position:absolute;top:8px;left:16px;transform:translateY(-200%);z-index:100;background:white;color:#123e78;padding:12px}
+.guide-skip:focus{transform:none}
+@media(max-width:1100px){
+ .guide-page .site-header .nav-links{position:absolute;top:100%;left:0;right:0;background:#fff;z-index:20;padding:12px 20px;border-bottom:1px solid #dce5f1}
+}
+@media(min-width:961px) and (max-width:1100px){
+ .guide-page .site-header nav{grid-template-columns:minmax(245px,1fr) auto auto;gap:15px}
+ .guide-page .site-header .header-toggle{display:none}
+ .guide-page .site-header.menu-ready .nav-links:not(.is-open),.guide-page .site-header .nav-links{position:static;display:flex;grid-column:2;grid-row:1;gap:16px;width:auto;border:0;padding:0}
+ .guide-page .site-header .nav-links a{font-size:12px}
+ .guide-page .site-header .nav-wa{grid-column:3}
+}
+@media(max-width:960px){.guide-page .site-header nav{padding:9px 20px}.guide-page .site-header .brand-short{font-size:16px}}
+@media(max-width:600px){
+ .guide-page .site-header nav{padding:8px 16px;gap:8px}
+ .guide-page .site-header .brand-logo{width:40px;height:40px;flex-basis:40px}
+ .guide-page .site-header .brand-short{font-size:15px}
+ .guide-page .site-header .brand-text>span{font-size:9px}
+ .guide-page .site-header .nav-wa{border-radius:12px;min-height:44px;padding:8px 12px}
+}
+/* Service guides share the existing header, colours and typography. */
+html:has(.guide-page){height:auto}
+body.guide-page{height:auto;overflow:auto;background:#fff}
+.guide-page .site-header{position:relative}
+.service-guide{padding:36px 24px 64px}
+.service-guide>.container{max-width:900px;margin:auto}
+.service-guide h1{font-family:Manrope,Inter,sans-serif;font-size:clamp(30px,4vw,44px);line-height:1.2;color:#0b1f3b;margin:24px 0}
+.service-guide h2{font-size:clamp(23px,3vw,30px);line-height:1.3;color:#0b1f3b;margin:0 0 16px}
+.service-guide p,.service-guide address{font-size:16px;line-height:1.8;color:#52647c;margin:16px 0;font-style:normal}
+.service-guide a{color:#123e78;text-underline-offset:4px}
+.service-guide .guide-cta{display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;min-height:48px;background:#087c30;color:#fff;border-radius:8px;text-decoration:none;font-weight:600;max-width:100%;text-align:center}
+.guide-breadcrumb{position:static;display:block;background:none;padding:0;border:0;backdrop-filter:none;font-size:14px;line-height:1.8;color:#52647c}
+.guide-breadcrumb>span{display:inline;color:#52647c}
+.guide-images{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:32px}
+.guide-images img{width:100%;height:auto;aspect-ratio:3/4;object-fit:contain;border-radius:12px;background:#f4f7fb}
+.guide-images figcaption{font-size:14px;padding:10px 0;color:#52647c}
+.guide-questions>section,.service-guide .container>section:last-of-type{padding:28px 0;border-top:1px solid #dce5f1}
+.service-guide :focus-visible{outline:3px solid #397bc5;outline-offset:4px}
+@media(max-width:600px){.service-guide{padding:24px 20px 48px}.guide-images{gap:10px}}
+
+/* Approved BM service content. */
+.service-guide .guide-intro{padding:24px 0 32px}
+.service-guide .guide-eyebrow{font-size:12px;font-weight:700;letter-spacing:.06em;color:#245744;margin:0}
+.service-guide .guide-price{font-size:28px;line-height:1.35;font-weight:750;color:#123e78;margin:24px 0}
+.service-guide .guide-price>span{display:block;font-size:14px;font-weight:400;line-height:1.7;color:#52647c;margin-top:6px}
+.service-guide .guide-section{padding:32px 0;border-top:1px solid #dce5f1}
+.service-guide h3{font-size:18px;line-height:1.5;color:#0b1f3b;margin:0 0 8px}
+.service-guide ul,.service-guide ol{padding-left:24px;margin:16px 0;line-height:1.8}
+.service-guide li{padding-left:6px;margin:10px 0}
+.service-guide .guide-problems{display:grid;grid-template-columns:1fr 1fr;column-gap:32px}
+.service-guide .guide-options{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:24px 0}
+.service-guide .guide-options>div{padding:20px;background:#f4f7fb;border-radius:12px}
+.service-guide .guide-options p{margin-bottom:0}
+.service-guide .guide-note{padding:16px 20px;border-left:3px solid #123e78;background:#f4f7fb}
+.service-guide .guide-process li{margin-bottom:20px}
+.service-guide .guide-process p{margin-top:0}
+.service-guide .guide-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+.service-guide .guide-cta{gap:10px}
+.service-guide .guide-map{display:inline-flex;align-items:center;justify-content:center;border:1px solid #b9c9df;border-radius:8px;min-height:48px;padding:12px 16px;text-decoration:none;text-align:center}
+.service-guide .guide-faq{border-bottom:1px solid #dce5f1}
+.service-guide .guide-faq summary{padding:18px 0;min-height:48px;font-weight:600;line-height:1.6;color:#0b1f3b;cursor:pointer}
+.service-guide .guide-faq p{margin:0 0 20px}
+@media(max-width:600px){.service-guide .guide-problems,.service-guide .guide-options{grid-template-columns:1fr}.service-guide .guide-section{padding:28px 0}.service-guide .guide-actions>a{width:100%}}
+
+
+/* Homepage footer identity, scoped to the lightweight service guide. */
+.guide-page .landing-footer{padding:30px max(24px,calc((100% - 1200px)/2));background:#061b30;color:#edf3ff;border-top:3px solid #d5ad45}
+.guide-page .footer-columns{display:grid;grid-template-columns:1fr .7fr 1fr;gap:34px;align-items:start}
+.guide-page .footer-columns>*{min-width:0}
+.guide-page .footer-brand-mark{display:flex;align-items:center;gap:12px}
+.guide-page .footer-brand-mark img{width:48px;height:48px;object-fit:contain;border-radius:50%;flex:none}
+.guide-page .footer-brand-mark strong{display:block;font:800 17px/1.4 Manrope,Inter,sans-serif;color:#fff}
+.guide-page .footer-brand-mark span{font-size:11px;color:#d1deec}
+.guide-page .footer-links{position:static;display:flex;flex-direction:column;align-items:flex-start;gap:4px;background:none;padding:0}
+.guide-page .footer-links>strong,.guide-page .footer-contact>strong{font-size:14px;color:#fff;display:block;margin-bottom:8px}
+.guide-page .footer-links a,.guide-page .footer-contact a{display:flex;align-items:center;min-height:44px;font-size:14px;color:#edf3ff;text-decoration:none;line-height:1.7}
+.guide-page .landing-footer a:hover{text-decoration:underline}
+.guide-page .footer-contact p{font-size:14px;line-height:1.8;color:#cedbeb}
+.guide-page .footer-bottom{margin-top:24px;padding-top:18px;border-top:1px solid #36516f;font-size:12px}
+.guide-page .footer-bottom p{opacity:1!important;color:#cedbeb}
+@media(max-width:768px){.guide-page .footer-columns{grid-template-columns:1fr;gap:24px}.guide-page .footer-columns>nav,.guide-page .footer-contact{border-top:1px solid #36516f;padding-top:22px}.guide-page .landing-footer{padding:28px 20px}}
