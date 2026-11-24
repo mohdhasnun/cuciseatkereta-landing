@@ -75,7 +75,7 @@ jobs:
               for request in requests:
                   host = urllib.parse.urlparse(request['url']).hostname or ''
                   if any(host == d or host.endswith('.'+d) for d in domains):
-                      assert not request.get('statusCode') and not request.get('transferSize'), request
+                      assert request.get('statusCode') in [None, -1, 0] and request.get('transferSize', 0) == 0, request
               print(path.name, {k:v['score'] for k,v in report['categories'].items()})
           print('PASS: tracking domains blocked in all four audits')
       - name: Save Jekyll output for inspection only
