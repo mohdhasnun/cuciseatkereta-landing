@@ -57,9 +57,33 @@ jobs:
             for mode in mobile desktop; do
               preset=""
               if [ "$mode" = desktop ]; then preset="--preset=desktop"; fi
-              npx --yes lighthouse@12.8.2 "$url" $preset --chrome-flags="--headless --no-sandbox" --blocked-url-patterns="*googletagmanager.com/*,*google-analytics.com/*,*googleadservices.com/*,*doubleclick.net/*,*wa.me/*" --output=json --output=html --output-path="$RUNNER_TEMP/lighthouse/$page-$mode" --only-categories=performance,accessibility,best-practices,seo
+              npx --yes lighthouse@12.8.2 "$url" $preset --chrome-flags="--headless --no-sandbox" --blocked-url-patterns="*googletagmanager.com/*" --blocked-url-patterns="*google-analytics.com/*" --blocked-url-patterns="*googleadservices.com/*" --blocked-url-patterns="*doubleclick.net/*" --blocked-url-patterns="*wa.me/*" --output=json --output=html --output-path="$RUNNER_TEMP/lighthouse/$page-$mode" --only-categories=performance,accessibility,best-practices,seo
             done
           done
+      - name: Verify tracking isolation and record scores
+        shell: python
+        run: |
+          import pathlib, os, json, urllib.parse
+          reports = list((pathlib.Path(os.environ['RUNNER_TEMP'])/'lighthouse').glob('*.report.json'))
+          assert len(reports) == 4
+          domains = ['googletagmanager.com','google-analytics.com','googleadservices.com','doubleclick.net','wa.me']
+          for path in reports:
+              report = json.loads(path.read_text())
+              assert len(report['configSettings']['blockedUrlPatterns']) == 5
+              assert not report.get('runtimeError'), report.get('runtimeError')
+              requests = report['audits']['network-requests']['details']['items']
+              for request in requests:
+                  host = urllib.parse.urlparse(request['url']).hostname or ''
+                  if any(host == d or host.endswith('.'+d) for d in domains):
+                      assert not request.get('statusCode') and not request.get('transferSize'), request
+              print(path.name, {k:v['score'] for k,v in report['categories'].items()})
+          print('PASS: tracking domains blocked in all four audits')
+      - name: Save Jekyll output for inspection only
+        uses: actions/upload-artifact@v4
+        with:
+          name: carpet-jekyll-output-qa
+          path: _site/
+          retention-days: 14
       - name: Save QA reports only
         if: always()
         uses: actions/upload-artifact@v4
